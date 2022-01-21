@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+</head>
+<body>
+  <h1>Probando Landing Page</h1>
+  <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSck0Ww3OHK15NDfzoez6DNMcmI4GzJSr94LRycbHhvhAUPsDw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+    Nombre:<br>
+    <input type="text" name="entry.404097006" id="entry.404097006"><br>
+    Apellido:<br>
+    <input type="text" name="entry.1417827832" id="entry.1417827832">
+    <input type="submit" value="Submit">
+  </form>
+  
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">var submitted=false;</script>
+  <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(2000);
+      $('#gform').prepend('Your submission has been processed...');
+    });
+  </script>
+</body>
+</html>
+<!-- https://docs.google.com/forms/d/e/1FAIpQLSck0Ww3OHK15NDfzoez6DNMcmI4GzJSr94LRycbHhvhAUPsDw/viewform?usp=pp_url&entry.404097006=eduardo&entry.1417827832=mejias -->
